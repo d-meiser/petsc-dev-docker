@@ -13,9 +13,11 @@ cd `ls | grep petsc`
             --with-lapack-lib=/opt/OpenBLAS/libopenblas.so \
             --download-mpich \
             --download-superlu_dist \
+            --download-metis \
             --download-parmetis \
             --download-hypre \
-            --with-debugging=0 COPTFLAGS='-O3 -march=core-avx2 -mtune=core-avx2' \
+            --with-debugging=0 \
+            COPTFLAGS='-O3 -march=core-avx2 -mtune=core-avx2' \
             CXXOPTFLAGS='-O3 -march=core-avx2 -mtune=core-avx2' \
             FOPTFLAGS='-O3 -march=core-avx2 -mtune=core-avx2'
 
