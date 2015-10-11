@@ -9,7 +9,7 @@ cd `ls | grep petsc`
 
 python2.7 configure PETSC_ARCH=dorcker-gnu-opt \
             --prefix=/opt/petsc \
-            --with-blas-lapack-dir=/opt/OpenBLAS/lib \
+            --with-blas-lapack-dir=/opt/OpenBLAS/ \
             --download-mpich \
             --with-debugging=0 COPTFLAGS='-O3 -march=core-avx2 -mtune=core-avx2' \
             CXXOPTFLAGS='-O3 -march=core-avx2 -mtune=core-avx2' \
