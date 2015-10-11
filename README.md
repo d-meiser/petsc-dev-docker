@@ -1,3 +1,20 @@
+# libmesh-git-docker
+Docker image for PETSc stable latest.
+
+It contains:
+- canesin/openblas-git : latest
+- PETSc 3.6.x latest stable release
+
+## Usage
+
+Build and start bash in the container:
+```bash
+$ docker build -t canesin/petsc-stable .
+$ docker exec -it canesin/petsc-stable bash
+```
+
+## License
+
 The MIT License (MIT)
 
 Copyright (c) 2015 Fábio César Canesin <fabio.canesin@gmail.com>
