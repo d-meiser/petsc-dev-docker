@@ -2,7 +2,6 @@ FROM canesin/openblas-git:latest
 MAINTAINER Fabio Cesar Canesin, fabio.canesin@gmail.com
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV python python2.7
 
 # Install PETSc from latest stable
 ADD petsc.sh /petsc.sh
