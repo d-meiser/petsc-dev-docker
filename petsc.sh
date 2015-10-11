@@ -1,20 +1,21 @@
 #!/usr/bin/bash
+
 set -xe
-cd /tmp/build/
+cd /tmp/
 # Build PETSc
 tar -xzf petsc.tar.gz
 rm petsc.tar.gz
 cd `ls | grep petsc`
-mkdir -p /opt/petsc/
-./configure PETSC_DIR=/opt/petsc/ \
-            PETSC_ARCH=dorcker-gnu-opt \
+
+python2.7 configure PETSC_ARCH=dorcker-gnu-opt \
+            --prefix=/opt/petsc \
             --with-blas-lapack-dir=/opt/OpenBLAS/lib \
+            --download-mpich \
             --with-debugging=0 COPTFLAGS='-O3 -march=core-avx2 -mtune=core-avx2' \
             CXXOPTFLAGS='-O3 -march=core-avx2 -mtune=core-avx2' \
-            FOPTFLAGS='-O3 -march=core-avx2 -mtune=core-avx2' \
-            --download-mpich
+            FOPTFLAGS='-O3 -march=core-avx2 -mtune=core-avx2'
 
-make PETSC_DIR=/opt/petsc/ PETSC_ARCH=dorcker-gnu-opt
-# Clean
+make PETSC_DIR=/opt/petsc PETSC_ARCH=dorcker-gnu-opt
+make install
 cd /
-rm -rf /tmp/build/*
+rm -rf /tmp/*
