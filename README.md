@@ -2,15 +2,15 @@
 Docker image for PETSc stable latest.
 
 It contains:
-- canesin/openblas-git : latest
-- PETSc 3.6.x latest stable release
+- canesin/openblas-git:latest
+- PETSc 3.6.x latest stable + ParMETIS + HYPRE + MPICH
 
 ## Usage
 
 Build and start bash in the container:
 ```bash
-$ docker build -t canesin/petsc-stable .
-$ docker exec -it canesin/petsc-stable bash
+$ docker pull canesin/petsc-stable
+$ docker run --rm -it canesin/petsc-stable bash
 ```
 
 ## License
