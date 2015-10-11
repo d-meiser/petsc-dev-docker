@@ -7,7 +7,7 @@ tar -xzf petsc.tar.gz
 rm petsc.tar.gz
 cd `ls | grep petsc`
 
-python2.7 configure PETSC_ARCH=dorcker-gnu-opt \
+python3 configure PETSC_ARCH=dorcker-gnu-opt \
             --prefix=/opt/petsc \
             --with-blas-lib=/opt/OpenBLAS/libopenblas.so \
             --with-lapack-lib=/opt/OpenBLAS/libopenblas.so \
