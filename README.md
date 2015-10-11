@@ -3,7 +3,7 @@ Docker image for PETSc stable latest.
 
 It contains:
 - canesin/openblas-git:latest
-- PETSc 3.6.x latest stable + ParMETIS + HYPRE + MPICH
+- PETSc stable + ParMETIS + SuperLU_dist + HYPRE + MPICH
 
 ## Usage
 
