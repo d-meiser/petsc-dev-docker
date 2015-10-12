@@ -1,9 +1,12 @@
-# libmesh-git-docker
-Docker image for PETSc stable latest.
+## PETSc stable docker image
 
-It contains:
-- canesin/openblas-git:latest
-- PETSc stable + ParMETIS + SuperLU_dist + HYPRE + MPICH
+- PETSc latest stable (3.6.x), AVX2 optimized
+- OpenBLAS develop, AVX2 optimized
+- MPICH 3.1.x
+- METIS 5.1.x
+- ParMETIS 4.0.x
+- HYPRE 2.10.x
+- SuperLU_dist 4.1
 
 ## Usage
 
