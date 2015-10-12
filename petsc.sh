@@ -20,7 +20,7 @@ cd `ls | grep petsc`
             CXXOPTFLAGS='-O3 -march=core-avx2 -mtune=core-avx2' \
             FOPTFLAGS='-O3 -march=core-avx2 -mtune=core-avx2'
 
-make PETSC_ARCH=dorcker-gnu-opt
+make
 make install
 cd /
 rm -rf /tmp/*
