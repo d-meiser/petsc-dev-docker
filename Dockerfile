@@ -25,4 +25,4 @@ RUN yum -y remove \
     gcc-c++ \
     gcc-gfortran
 
-RUN yum -y clean all
+RUN yum clean all
