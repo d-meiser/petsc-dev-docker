@@ -17,9 +17,9 @@ cd `ls | grep petsc`
             --download-parmetis \
             --download-hypre \
             --with-debugging=0 \
-            COPTFLAGS='-O3 -march=core-avx2 -mtune=core-avx2' \
-            CXXOPTFLAGS='-O3 -march=core-avx2 -mtune=core-avx2' \
-            FOPTFLAGS='-O3 -march=core-avx2 -mtune=core-avx2'
+            COPTFLAGS='-O2 -march=core-avx2 -mtune=core-avx2' \
+            CXXOPTFLAGS='-O2 -march=core-avx2 -mtune=core-avx2' \
+            FOPTFLAGS='-O2 -march=core-avx2 -mtune=core-avx2'
 
 make
 make install
