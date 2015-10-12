@@ -7,7 +7,6 @@ RUN yum -y install \
     make \
     cmake \
     perl \
-    unzip \
     gcc \
     gcc-c++ \
     gcc-gfortran
@@ -22,7 +21,6 @@ RUN yum -y remove \
     make \
     cmake \
     perl \
-    unzip \
     gcc \
     gcc-c++ \
     gcc-gfortran
