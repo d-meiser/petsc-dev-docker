@@ -9,7 +9,7 @@ cd `ls | grep petsc`
 
 ./configure PETSC_ARCH=dorcker-gnu-opt \
             --prefix=/opt/petsc \
-            --with-blas-lapack-dir=/opt/OpenBLAS \
+            --with-blas-lapack-lib=/opt/OpenBLAS/lib/libopenblas.a \
             --download-mpich \
             --download-superlu_dist \
             --download-metis \
