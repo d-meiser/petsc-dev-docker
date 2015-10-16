@@ -25,8 +25,8 @@ make
 make install
 
 # Add PETSC_DIR to env variables of container
-echo "export PETSC_DIR=/opt/petsc" >> $HOME/.bash_profile
-source $HOME/.bash_profile
+echo "export PETSC_DIR=/opt/petsc" >> $HOME/.bashrc
+source $HOME/.bashrc
 
 # Clean files
 cd /
