@@ -1,7 +1,7 @@
 ## PETSc stable docker image
 
-- PETSc latest stable (3.6.x), AVX2 optimized
-- OpenBLAS develop, HASWELL target
+- PETSc latest stable (3.6.x), AVX optimized
+- OpenBLAS develop, AVX optimized
 - MPICH 3.1.x
 - METIS 5.1.x
 - ParMETIS 4.0.x
