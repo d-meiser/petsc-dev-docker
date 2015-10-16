@@ -1,7 +1,7 @@
 #!/usr/bin/bash
-
 set -xe
 cd /tmp/
+
 # Build PETSc
 tar -xzf petsc.tar.gz
 rm petsc.tar.gz
@@ -23,6 +23,11 @@ cd `ls | grep petsc`
 
 make
 make install
+
+# Add PETSC_DIR to env variables of container
 echo "export PETSC_DIR=/opt/petsc" >> $HOME/.bash_profile
+source $HOME/.bash_profile
+
+# Clean files
 cd /
 rm -rf /tmp/*
