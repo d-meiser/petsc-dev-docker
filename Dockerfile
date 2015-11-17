@@ -1,5 +1,5 @@
-FROM canesin/openblas-git:latest
-MAINTAINER Fabio Cesar Canesin, fabio.canesin@gmail.com
+FROM centos:latest
+MAINTAINER Dominic Meiser, dmeiser79@gmail.com
 
 # Update image and install required packages
 RUN yum -y update
@@ -13,7 +13,7 @@ RUN yum -y install \
 
 # Install PETSc from latest stable
 ADD petsc.sh /petsc.sh
-ADD http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-lite-3.6.tar.gz /tmp/petsc.tar.gz
+RUN git clone https://bitbucket.org/petsc/petsc /tmp/petsc
 RUN bash /petsc.sh && rm /petsc.sh
 
 # Finalize by cleaning
