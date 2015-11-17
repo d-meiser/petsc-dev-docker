@@ -1,26 +1,13 @@
-## PETSc stable docker image
+Docker container for development branch of petsc (`master`).
 
-- PETSc latest stable (3.6.x), AVX optimized
-- OpenBLAS develop, AVX optimized
-- MPICH 3.1.x
-- METIS 5.1.x
-- ParMETIS 4.0.x
-- HYPRE 2.10.x
-- SuperLU_dist 4.1
-
-## Usage
-
-Build and start bash in the container:
-```bash
-$ docker pull canesin/petsc-stable
-$ docker run --rm -it canesin/petsc-stable bash
-```
+This is based on the container by @canesin
+(https://github.com/canesin/petsc-stable-docker)
 
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Fábio César Canesin <fabio.canesin@gmail.com>
+Copyright (c) 2015 Fábio César Canesin <fabio.canesin@gmail.com>, Dominic Meiser <dmeiser79@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
