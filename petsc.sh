@@ -16,7 +16,8 @@ OPT_FLAGS="-O2 -ffast-math -march=corei7-avx -mtune=corei7-avx"
             --with-mpiuni-fortran-bindings=0 \
             --with-ssl=0 \
             --with-shared-libraries=1 \
-            --download-mpich \
+            --download-mpich=1 \
+            --download-fblaslapack=1 \
             --with-fortran-kernels=0 \
             --with-debugging=0 \
             COPTFLAGS=${OPT_FLAGS} \
