@@ -4,12 +4,13 @@ MAINTAINER Dominic Meiser, dmeiser79@gmail.com
 # Update image and install required packages
 RUN yum -y update
 RUN yum -y install \
-    make \
     cmake \
-    perl \
     gcc \
     gcc-c++ \
-    gcc-gfortran
+    gcc-gfortran \
+    git \
+    make \
+    perl
 
 # Install PETSc from latest stable
 ADD petsc.sh /petsc.sh
