@@ -3,23 +3,25 @@ set -xe
 cd /tmp/
 
 # Build PETSc
-tar -xzf petsc.tar.gz
-rm petsc.tar.gz
-cd `ls | grep petsc`
+PETSC_DIR=`ls | grep petsc`
+echo "PETSC_DIR == $PETSC_DIR"
+cd $PETSC_DIR
 
-./configure PETSC_ARCH=dorcker-gnu-opt \
+OPT_FLAGS="-O2 -ffast-math -march=corei7-avx -mtune=corei7-avx"
+
+./configure PETSC_ARCH=docker-gnu-opt \
             --prefix=/opt/petsc \
-            --with-blas-lapack-lib=/opt/OpenBLAS/lib/libopenblas.a \
-            --with-cxx-dialect=C++11 \
+            --with-clanguage=c \
+            --with-pthread=0 \
+            --with-mpiuni-fortran-bindings=0 \
+            --with-ssl=0 \
+            --with-shared-libraries=1 \
             --download-mpich \
-            --download-superlu_dist \
-            --download-metis \
-            --download-parmetis \
-            --download-hypre \
+            --with-fortran-kernels=0 \
             --with-debugging=0 \
-            COPTFLAGS='-O2 -march=corei7-avx -mtune=corei7-avx' \
-            CXXOPTFLAGS='-O2 -march=corei7-avx -mtune=corei7-avx' \
-            FOPTFLAGS='-O2 -march=corei7-avx -mtune=corei7-avx'
+            COPTFLAGS=${OPT_FLAGS} \
+            CXXOPTFLAGS=${OPT_FLAGS} \
+            FOPTFLAGS=${OPT_FLAGS}
 
 make
 make install
